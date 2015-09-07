@@ -21,7 +21,7 @@ PROPERTY3=PROPTERY3_VALUE
 PROPERTY4=PROPTERY4_VALUE
 .
 .
-.
+PROPERTYn=PROPTERYn_VALUE
 ```
 
 Please note, because this library loads all configuration items when it first gets a config item, any properties that are added after that even won't be available until the application is restarted. 
