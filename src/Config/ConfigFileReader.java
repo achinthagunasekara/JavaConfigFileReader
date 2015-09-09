@@ -40,4 +40,21 @@ public class ConfigFileReader {
         
         return properties.getProperty(s);
     }
+    //returns int property
+    public Integer getIntPropertyFor(String s) {
+        
+        return Integer.parseInt(getPropertyFor(s));
+    }
+    
+    //returns double property
+    public Double getDoublePropertyFor(String s) {
+        
+        return Double.parseDouble(getPropertyFor(s));
+    }
+    
+    //returns bool property
+    public Boolean getBooleanPropertyFor(String s) {
+        
+        return Boolean.parseBoolean(getPropertyFor(s));
+    }
 }
