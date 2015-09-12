@@ -14,7 +14,7 @@ public class ConfigFileReader {
     
     //Configuration file used by the config reader
     private final String file = "config.properties";
-    private final Properties properties;
+    private Properties properties;
     private static ConfigFileReader instance;
     
     public static ConfigFileReader getConfigFileReaderInstance() throws IOException {
@@ -28,11 +28,28 @@ public class ConfigFileReader {
         return instance;
     }
     
-    //read and load the config file
     private ConfigFileReader() throws IOException {
 		
+        loadConfig(file);
+    }
+    
+    //read and load the config file
+    private void loadConfig(String configFile) throws IOException {
+        
         properties = new Properties();
-        properties.load(new FileInputStream(file));
+        properties.load(new FileInputStream(configFile));
+    }
+    
+    //reloads the configuration during runtime
+    public void reloadConfig() throws IOException {
+        
+        loadConfig(file);
+    }
+    
+    //reloads the configuration during runtime from a provided configuration file
+    public void reloadConfig(String configFile) throws IOException {
+        
+        loadConfig(configFile);
     }
     
     //get the propery value for strng s
