@@ -24,7 +24,13 @@ PROPERTY4=PROPTERY4_VALUE
 PROPERTYn=PROPTERYn_VALUE
 ```
 
-Please note, because this library loads all configuration items when it first gets a config item, any properties that are added after that even won't be available until the application is restarted. 
+Please note, because this library loads all configuration items when it first gets a config item, any properties that are added won't be added until the configuration is reloaded.
+
+You can do this during the run time by calling the following method.
+
+```java
+config.reloadConfig();
+```
 
 ##Accessing Config Items
 

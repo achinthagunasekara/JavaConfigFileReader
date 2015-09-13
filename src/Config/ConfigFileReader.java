@@ -13,6 +13,7 @@ import java.util.Properties;
 public class ConfigFileReader {
     
     //Configuration file used by the config reader
+    //config file must be located inside the application path
     private final String file = "config.properties";
     private Properties properties;
     private static ConfigFileReader instance;
