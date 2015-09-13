@@ -26,10 +26,18 @@ PROPERTYn=PROPTERYn_VALUE
 
 Please note, because this library loads all configuration items when it first gets a config item, any properties that are added won't be added until the configuration is reloaded.
 
+##Reloading the Configuration
+
 You can do this during the run time by calling the following method.
 
 ```java
 config.reloadConfig();
+```
+
+Or you are able to reload the configuration from entirely different file during run time by calling the following method,
+
+```java
+config.reloadConfig("NEW_CONFIG_FILE");
 ```
 
 ##Accessing Config Items
