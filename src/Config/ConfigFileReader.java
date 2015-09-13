@@ -53,31 +53,31 @@ public class ConfigFileReader {
     }
     
     //get the propery value for strng s
-    public String getPropertyFor(String s) throws Exception {
+    public String getPropertyFor(String s) throws ConfigItemNotFoundException {
         
         String value = properties.getProperty(s);
         
         if(value == null) {
             
-            throw new Exception("Item '" + s + "' not found in the configuration file");
+            throw new ConfigItemNotFoundException(s);
         }
         
         return value;
     }
     //returns int property
-    public Integer getIntPropertyFor(String s) throws Exception {
+    public Integer getIntPropertyFor(String s) throws ConfigItemNotFoundException {
         
         return Integer.parseInt(getPropertyFor(s));
     }
     
     //returns double property
-    public Double getDoublePropertyFor(String s) throws Exception {
+    public Double getDoublePropertyFor(String s) throws ConfigItemNotFoundException {
         
         return Double.parseDouble(getPropertyFor(s));
     }
     
     //returns bool property
-    public Boolean getBooleanPropertyFor(String s) throws Exception {
+    public Boolean getBooleanPropertyFor(String s) throws ConfigItemNotFoundException {
         
         return Boolean.parseBoolean(getPropertyFor(s));
     }
