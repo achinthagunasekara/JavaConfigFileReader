@@ -49,4 +49,4 @@ ConfigFileReader config = ConfigFileReader.getConfigFileReaderInstance();
 config.getPropertyFor("CONFIG_ITEM");
 ```
 
-This returns a String object.
+This returns a String object.test
