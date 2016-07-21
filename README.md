@@ -50,7 +50,3 @@ config.getPropertyFor("CONFIG_ITEM");
 ```
 
 This returns a String object.test
-
-
-
-
